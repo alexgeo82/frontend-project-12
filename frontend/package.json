@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hexlet/chat-server": "^1.1.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
