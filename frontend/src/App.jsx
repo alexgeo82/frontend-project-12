@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MainPage from './components/MainPage'
-import LoginPage from './components/LoginPage'
+import LoginForm from './components/LoginForm'
 import NotFoundPage from './components/NotFoundPage'
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/login' element={<LoginForm />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
