@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       // Проксируем запросы к API
       '/api': {
-        target: 'http://localhost:5001',
+        target: 'http://localhost:5002',
       },
     },
   },

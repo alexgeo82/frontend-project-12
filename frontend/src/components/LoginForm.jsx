@@ -2,11 +2,9 @@ import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+import { redirect } from 'react-router'
 
 const LoginForm = () => {
-  const history = useHistory()
-
   const initialValues = { username: '', password: '' }
 
   const validationSchema = Yup.object({
@@ -19,7 +17,7 @@ const LoginForm = () => {
       const response = await axios.post('/api/login', values)
       const { token } = response.data
       localStorage.setItem('token', token)
-      history.push('/')
+      redirect('/')
     } catch (error) {
       setErrors({ submit: 'Invalid username or password' })
     } finally {
